@@ -1,0 +1,93 @@
+package praktikum;
+
+import java.util.Scanner;
+
+public class Array {
+
+    public static void Array1() {
+
+        int nilai[] = new int[3];
+        nilai[0] = 70;
+        nilai[1] = 80;
+        nilai[2] = 65;
+        double rata2 = 0.0;
+        for (int i = 0; i < nilai.length; i++) {
+            rata2 += nilai[i];
+        }
+        rata2 /= nilai.length;
+        System.out.println("rata-rata : " + rata2);
+    }
+
+    public static void Array2() {
+
+        String[] hari;
+        hari = new String[7];
+        hari[0] = "Senin";
+        hari[1] = "Selasa";
+        hari[2] = "Rabu";
+        hari[3] = "Kamis";
+        hari[4] = "Jumat";
+        hari[5] = "Sabtu";
+        hari[6] = "Minggu";
+        for (String week : hari) {
+            System.out.println("nama-nama hari : " + week);
+        }
+    }
+
+    public static void Array22() {
+
+        String[] hari;
+        hari = new String[7];
+        hari[0] = "Senin";
+        hari[1] = "Selasa";
+        hari[2] = "Rabu";
+        hari[3] = "Kamis";
+        hari[4] = "Jumat";
+        hari[5] = "Sabtu";
+        hari[6] = "Minggu";
+
+        System.out.println("upacara hari " + hari[0]);
+    }
+
+    public static void Array3() {
+
+        int skor[][] = new int[2][3];
+        skor[0][0] = 81;
+        skor[0][1] = 82;
+        skor[0][2] = 83;
+        skor[1][0] = 84;
+        skor[1][1] = 85;
+        skor[1][2] = 86;
+
+        String jur[] = {"RPL", "PBO"};
+        double reratajur[] = new double[skor.length];
+        for (int i = 0; i < skor.length; i++) {
+            for (int j = 0; j < skor[0].length; j++) {
+                reratajur[i] += skor[i][j];
+            }
+            reratajur[i] /= skor[0].length;
+        }
+
+        System.out.println("Nilai Mata Pelajaran\n");
+        System.out.println("MK\tMinggu1\tMinggu2\tMinggu3\tRata-Rata");
+
+        for (int i = 0; i < skor.length; i++) {
+            System.out.print(jur[i] + "\t");
+            {
+                for (int j = 0; j < skor[0].length; j++) {  
+                    System.out.print(skor[i][j] + "\t");
+                }
+                for (int j = 0; j < skor[0].length; j++) {
+                }
+                System.out.print(reratajur[i] + "\n");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Array1();
+        Array2();
+        Array3();
+        Array22();
+    }
+}
