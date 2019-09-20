@@ -1,0 +1,93 @@
+
+import java.util.Scanner;
+
+public class LatihanArray {
+
+    public static void latihan1() {
+        String cari;
+        boolean ketemu = false;
+        String[] nama = new String[10];
+        nama[0] = "Dera";
+        nama[1] = "Ana";
+        nama[2] = "Adi";
+        nama[3] = "Sela";
+        nama[4] = "Anis";
+        nama[5] = "Umar";
+        nama[6] = "Ara";
+        nama[7] = "Ica";
+        nama[8] = "Ilan";
+        nama[9] = "Didi";
+
+        Scanner tik = new Scanner(System.in);
+        System.out.print("Nama : ");
+        cari = tik.nextLine();
+
+        for (String nama1 : nama) {
+            if (cari.equals(nama1)) {
+                ketemu = true;
+                break;
+            }
+        }
+        if (ketemu == true) {
+            System.out.println("Kelas ini ? " + ketemu);
+        } else {
+            System.out.println("Salah kelas");
+        }
+    }
+
+    public static void latihan2() {
+        String cari;
+        boolean ketemu = true;
+        String[] media = new String[]{" ", "Geografi", "Gua", "Gema", "Gaung"};
+
+        Scanner tik = new Scanner(System.in);
+        System.out.print("Data yang ingin dicari : ");
+        cari = tik.nextLine();
+
+        for (int i = 0; i < media.length; i++) {
+            if (cari.equals(media[i])) {
+                ketemu = false;
+                System.out.println("Data ditemukan pada indeks ke-" + i);
+            }
+        }
+        if (ketemu == true) {
+            System.out.println("Data tidak ada");
+        }
+    }
+
+    public static void latihan3() {
+        int max = 4;
+        int[] media = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.print("Data yang dimiliki : ");
+        for (int i = 0; i < media.length; i++) {
+            System.out.print(media[i] + "\t");
+            if (media[i] > max) {
+                max = media[i];
+            }
+        }
+        System.out.println("\n Nilai terbesar : " + max);
+    }
+    
+    public static void latihan4() {
+        String cari;
+        
+        Scanner tik = new Scanner(System.in);
+        System.out.println("Kalimat : ");
+        cari = tik.nextLine();
+        
+        int huruf = 0;
+        for (int i = 0; i < cari.length(); i++) {
+            if (cari.length() == huruf) {
+                huruf++;
+            }   
+        }
+        System.out.println("Jumlah huruf : " + cari.length());
+    }
+
+    public static void main(String[] args) {
+        latihan1();
+        latihan2();
+        latihan3();
+        latihan4();
+    }
+}
