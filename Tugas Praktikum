@@ -1,0 +1,117 @@
+package array;
+
+import java.util.Scanner;
+
+public class TugasArray {
+    
+    public static void tugas1() {
+        int cari;
+        int x = 0;
+        boolean ketemu = false;
+        int nilai[] = new int[] {74, 98, 72, 74, 72, 90, 81, 72};
+        System.out.println("Data pada array : ");
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print(nilai[i] + "\t");
+        }
+        System.out.println("\nMasukkan nilai yang dicari : ");        
+        Scanner tik = new Scanner(System.in);
+        cari = tik.nextInt();
+        
+        for (int i = 0; i < nilai.length; i++) {
+            if (cari == nilai[i]) {
+                ketemu = true;
+                x++;
+            }
+        }
+        if (ketemu == true) {
+            System.out.println("Data yang dicari ditemukan sebanyak " + x + " kali");
+        } else {
+            System.out.println("Data tidak ditemukan!");
+        }
+        System.out.println("\n");
+    }
+    public static void tugas2() {
+        int a = 0;
+        int nilai[] = new int[] {83, 76, 45, 90, 85, 80, 78, 74};
+        System.out.println("Data pada array : ");
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print(nilai[i] + "\t");  
+        }
+        for (int i: nilai){
+            a = a + i;
+        }
+        double rata;
+        rata = a / nilai.length;
+        System.out.println("\nRata-rata nilai = " + rata);
+        System.out.println("\nNilai yang diatas rata-rata ");
+        for (int i = 0; i < nilai.length; i++) {
+            if (nilai[i] > rata) {
+                System.out.println(nilai[i] + "\t");
+            }
+        }
+        System.out.println("\n");
+    } 
+    public static void tugas3() {
+        int a = 0;
+        int b =0;
+        int nilai[] = new int[] {92, 98, 76, 72, 84, 101, 39};
+        System.out.println("Data pada array : ");
+        for (int i = 0; i < nilai.length; i++) {
+            System.out.print(nilai[i] + "\t");  
+        }
+        System.out.println();
+        System.out.println("\nNilai yang merupakan kelipatan tiga = ");
+        for (int i = 0; i < nilai.length; i++) {
+            if (a == nilai[i] % 3) {
+                b++;
+                System.out.println(nilai[i]);
+            }
+        }
+        System.out.println("\n");
+    }
+    public static void tugas4() {
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        int d = 0;
+        int e = 0;
+        String cari;
+        
+        Scanner tik = new Scanner(System.in);
+        System.out.println("Kalimatnya? ");
+        cari = tik.nextLine();
+        
+        for (int i = 0; i < cari.length(); i++) {
+            if (cari.charAt(i) == 'a') {
+                a++;
+            }
+            if (cari.charAt(i) == 'i') {
+                b++;
+            }
+            if (cari.charAt(i) == 'u') {
+                c++;
+            }
+            if (cari.charAt(i) == 'e') {
+                d++;
+            }
+            if (cari.charAt(i) == 'o') {
+                e++;
+            }
+        }
+        int x = a + b + c + d + e;
+        System.out.println("Jumlah huruf vokal a = " + a);
+        System.out.println("Jumlah huruf vokal i = " + b);
+        System.out.println("Jumlah huruf vokal u = " + c);
+        System.out.println("Jumlah huruf vokal e = " + d);
+        System.out.println("Jumlah huruf vokal o = " + e);        
+        System.out.println("Jumlah huruf vokal = " + x);
+    }
+
+    public static void main(String[] args) {
+        tugas1();
+        tugas2();
+        tugas3();
+        tugas4();
+    }
+    
+}
